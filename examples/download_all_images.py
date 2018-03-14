@@ -15,5 +15,5 @@ with camera.session():
         # Download all things that are not groups of other things.
         if info.ObjectFormat != 'Association':
             obj = camera.get_object(handle)
-            with open(info.Filename, mode='w') as f:
+            with open(info.Filename, mode='wr') as f:
                 f.write(obj.Data)
